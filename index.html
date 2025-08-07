@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>金色のテリア｜ポートフォリオ</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0e1113;
+      --bg-card: #161b22;
+      --accent: #ffd866;
+      --accent-soft: #ffecb3;
+      --text-main: #ededed;
+      --text-sub: #a8b0c0;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;padding:0;
+      font-family:'Noto Sans JP',sans-serif;
+      background:var(--bg-main);
+      color:var(--text-main);
+      overflow-x:hidden;
+    }
+    /* ---------------- HEADER ---------------- */
+    header{
+      position:relative;
+      height:320px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      overflow:hidden;
+    }
+    header::before{ /* background image */
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('青色ヘッダー.jpg') center/cover no-repeat;
+      filter:brightness(0.75);
+      animation:bgZoom 15s ease-in-out infinite alternate;
+    }
+    header::after{ /* overlay gradient */
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(135deg,rgba(20,30,48,0.9) 0%,rgba(36,59,85,0.5) 100%);
+    }
+    @keyframes bgZoom{
+      from{transform:scale(1);}to{transform:scale(1.08);} }
+
+    header h1{
+      position:relative;/* stacking */
+      font-family:'Poppins',sans-serif;
+      font-size:2.8rem;
+      margin:0 0 8px;
+      color:var(--accent);
+      letter-spacing:1.2px;
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));
+      animation:fadeDown 0.9s ease-out both;
+    }
+    header p{
+      position:relative;
+      margin:0;
+      font-size:1.1rem;
+      color:var(--text-sub);
+      animation:fadeDown 1.1s ease-out both;
+    }
+    /* ---------------- MAIN LAYOUT ---------------- */
+    .container{
+      max-width:900px;
+      margin:-80px auto 0;/* slight overlap but avoids burying */
+      padding:0 24px 100px;
+    }
+    .card{
+      background:var(--bg-card);
+      border-radius:24px;
+      padding:48px 40px;
+      box-shadow:0 12px 32px rgba(0,0,0,.35);
+      margin-bottom:60px;
+      animation:fadeUp 0.8s ease both;
+    }
+    /* delay appearance */
+    .card:nth-of-type(2){animation-delay:.15s;}
+    .card:nth-of-type(3){animation-delay:.3s;}
+    .card:nth-of-type(4){animation-delay:.45s;}
+    .card:nth-of-type(5){animation-delay:.6s;}
+
+    h2{
+      font-family:'Poppins',sans-serif;
+      font-size:1.6rem;
+      margin:0 0 26px;
+      color:var(--accent-soft);
+    }
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul,ol{padding-left:1.25em;}
+    .tag{
+      display:inline-block;
+      background:#262c36;
+      color:var(--accent-soft);
+      border-radius:12px;
+      padding:5px 14px;
+      margin:0 8px 8px 0;
+      font-size:.85rem;
+    }
+    .flex{display:flex;flex-wrap:wrap;gap:14px;}
+    /* ---------------- FOOTER ---------------- */
+    footer{
+      text-align:center;
+      padding:36px 0 50px;
+      color:var(--text-sub);
+      font-size:.85rem;
+      background:#0c0f12;
+    }
+    footer .public-url{margin-top:18px;color:var(--accent-soft);font-size:.95rem;}
+
+    /* ---------------- ANIMATIONS ---------------- */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media(max-width:600px){
+      header{height:260px;}
+      header h1{font-size:2.1rem;}
+      header p{font-size:.95rem;}
+      .container{margin:-60px auto 0;}
+      .card{padding:32px 24px;margin-bottom:44px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>金色のテリア</h1>
+    <p>Freelance | 映像ディレクター / 映像プロデューサー</p>
+  </header>
+
+  <div class="container">
+    <!-- About -->
+    <section class="card">
+      <h2>プロフィール</h2>
+      <div class="flex">
+        <span class="tag">ディレクター歴1年</span>
+        <span class="tag">プロデューサー歴2年</span>
+        <span class="tag">総合制作歴3年</span>
+      </div>
+      <p>動画プロジェクトの責任者（PM）として、企画・撮影・編集からSNS拡散・収益化までを一貫して手掛け、<br><strong>最速で月商450万円達成</strong> など、ビジネス成果にコミットした実績を持つフリーランスクリエイターです。</p>
+    </section>
+
+    <!-- Works -->
+    <section class="card">
+      <h2>実績ポートフォリオ</h2>
+      <ol>
+        <li><strong>テレビ風 YouTube チャンネル</strong>（企画・PM担当）<br><a href="https://youtu.be/H1cYrlVtNEI?si=g4SNKIiYIzuV-QWk" target="_blank">視聴リンク</a></li>
+        <li><strong>Instagram 1,000万回再生リール</strong>（編集・拡散戦略）<br><a href="https://www.instagram.com/reel/DIbRIgCp148/" target="_blank">投稿リンク</a></li>
+        <li><strong>X（Twitter）500万インプレッション投稿</strong>（企画・ライティング）<br><a href="https://x.com/nanpa_tokyo_/status/1917188003962958175" target="_blank">投稿リンク</a></li>
+        <li><strong>CM風プロモーション動画</strong>（ディレクション・編集）<br><a href="https://x.com/roketdan4/status/1928741666086858952" target="_blank">視聴リンク</a></li>
+        <li><strong>AI生成映像チャンネル運用</strong><br><a href="https://www.youtube.com/@AI_Generated_HumanLife" target="_blank">YouTube @AI_Generated_HumanLife</a></li>
+      </ol>
+    </section>
+
+    <!-- Skills -->
+    <section class="card">
+      <h2>スキルセット</h2>
+      <ul>
+        <li>プロジェクトマネジメント（KGI/KPI設計、タスク管理、ROI分析）</li>
+        <li>コンテンツ企画（テレビ番組風、SNSバズ、ストーリーテリング）</li>
+        <li>撮影・編集（TV風／YouTube長尺・Shorts／CM・リール／AI動画）</li>
+        <li>マーケティング（SNS拡散、広告運用、インフルエンサー協業）</li>
+        <li>Premiere Pro・After Effects・DaVinci Resolve・Veo3・Make.com など</li>
+      </ul>
+    </section>
+
+    <!-- Services -->
+    <section class="card">
+      <h2>サービス</h2>
+      <ul>
+        <li>動画マーケティング戦略設計、KGI/KPI設計、ペルソナ設定</li>
+        <li>動画企画・シナリオ制作（TV番組風／YouTube／CM／Shorts）</li>
+        <li>撮影ディレクション、キャスティング・進行管理</li>
+        <li>映像編集（TVカット割、モーショングラフィックス、字幕最適化）</li>
+        <li>SNSグロース支援、ハッシュタグ設計・広告運用・データ分析</li>
+        <li>AI動画生成導入（Veo3など）</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="card">
+      <h2>お問い合わせ</h2>
+      <p>📧 <a href="mailto:reola3939@gmail.com">reola3939@gmail.com</a><br>
+         🐦 <a href="https://x.com/douga_yaru" target="_blank">@douga_yaru</a></p>
+      <p>まずはお気軽にご相談ください。30分のオンライン相談も承ります。</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 金色のテリア | All rights reserved.
+  </footer>
+</body>
+</html>
